@@ -1182,18 +1182,30 @@
     font-size: 1rem; /* Dari 1.1rem */
 }
 /* === PIXEL ART OVERRIDES === */
-/* Custom icons for feature cards */
-.pixel-art .feature-icon-small {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    image-rendering: auto; /* Maintain image quality */
-    margin-bottom: 8px;
+/* Custom icons for feature cards - FIXED ALIGNMENT */
+.pixel-art .feature-card-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 15px;
 }
 
-/* Remove old emoji styling */
-.pixel-art .feature-card-small .feature-icon-small:not(img) {
-    display: none;
+.pixel-art .feature-icon-small {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    image-rendering: auto;
+    margin-bottom: 10px;
+    display: block;
+}
+.pixel-art .feature-name-small {
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0;
 }
 /* Logo enlargement for pixel art theme */
 .pixel-art .logo {
