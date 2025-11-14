@@ -1079,3 +1079,207 @@
     height: 40px;
     font-size: 1rem; /* Dari 1.1rem */
 }
+/* === PIXEL ART OVERRIDES === */
+.pixel-art .balance-container {
+    background: var(--color-light);
+    border: var(--border-pixel) solid var(--color-dark);
+    border-radius: 0;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.pixel-art .balance-container::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: -2px;
+    bottom: -2px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.pixel-art .balance-label {
+    color: var(--color-dark);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.pixel-art .balance-amount {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+    font-weight: 900;
+}
+
+.pixel-art .today-pl {
+    margin-top: 8px;
+    padding: 6px 10px;
+    background: var(--color-light);
+    border: var(--border-pixel) solid var(--color-dark);
+    display: inline-block;
+}
+
+.pixel-art .today-pl-label {
+    color: var(--color-dark);
+    font-weight: bold;
+}
+
+.pixel-art .today-pl-value {
+    font-weight: bold;
+    padding: 2px 6px;
+    border: var(--border-pixel) solid var(--color-dark);
+    background: var(--color-light);
+}
+
+.pixel-art .today-pl-value.positive {
+    color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.pixel-art .today-pl-value.negative {
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+/* Feature Grid Pixel Style */
+.pixel-art .feature-grid-horizontal {
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.pixel-art .feature-card-small {
+    background: var(--color-light);
+    border: var(--border-pixel) solid var(--color-dark);
+    border-radius: 0;
+    padding: 16px 12px;
+    transition: none;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.pixel-art .feature-card-small:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    background: #f0fff0;
+}
+
+.pixel-art .feature-card-small::before {
+    display: none;
+}
+
+.pixel-art .feature-icon-small {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    image-rendering: pixelated;
+}
+
+.pixel-art .feature-name-small {
+    color: var(--color-dark);
+    font-weight: bold;
+}
+
+/* Coin Section Pixel Style */
+.pixel-art .coin-section {
+    margin-bottom: 20px;
+}
+
+.pixel-art .section-title {
+    color: var(--color-dark);
+    border-bottom: var(--border-pixel) solid var(--color-dark);
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.pixel-art .coin-list {
+    background: var(--color-light);
+    border: var(--border-pixel) solid var(--color-dark);
+    border-radius: 0;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-art .coin-item {
+    background: var(--color-light);
+    border-bottom: var(--border-pixel) solid var(--color-dark);
+    padding: 14px 12px;
+    transition: none;
+    cursor: pointer;
+}
+
+.pixel-art .coin-item:last-child {
+    border-bottom: none;
+}
+
+.pixel-art .coin-item:hover {
+    background: #f0fff0;
+    transform: translateX(4px);
+}
+
+.pixel-art .coin-icon {
+    border: var(--border-pixel) solid var(--color-dark);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.pixel-art .coin-pair {
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+.pixel-art .coin-volume {
+    color: var(--color-dark);
+    opacity: 0.8;
+}
+
+.pixel-art .coin-price {
+    font-weight: bold;
+}
+
+.pixel-art .coin-price.positive {
+    color: var(--color-success);
+}
+
+.pixel-art .coin-price.negative {
+    color: var(--color-danger);
+}
+
+.pixel-art .coin-change {
+    font-weight: bold;
+    padding: 2px 6px;
+    border: var(--border-pixel) solid var(--color-dark);
+    background: var(--color-light);
+    display: inline-block;
+}
+
+.pixel-art .coin-change.positive {
+    color: var(--color-success);
+    border-color: var(--color-success);
+    background: #f0fff0;
+}
+
+.pixel-art .coin-change.negative {
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+    background: #fff0f0;
+}
+
+/* Profile Icon Pixel Style */
+.pixel-art .profile-icon {
+    background: var(--color-primary);
+    border: var(--border-pixel) solid var(--color-dark);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+    color: var(--color-light);
+    font-weight: bold;
+    transition: none;
+}
+
+.pixel-art .profile-icon:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
