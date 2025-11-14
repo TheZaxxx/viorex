@@ -6,43 +6,46 @@
     <title>Trade - VIOREX</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
+    <!-- TAMBAH BARIS INI -->
+    <link rel="stylesheet" href="css/pixel-art.css">
 </head>
-<body>
+<!-- MODIFIKASI BODY MENJADI SEPERTI INI -->
+<body class="pixel-art">
     <div class="container">
         <header>
             <div class="logo">
                 <img src="assets/images/logo.png" alt="VIOREX">
                 <h1>VIOREX</h1>
             </div>
-            <div class="profile-icon">
+            <div class="profile-icon pixel-icon">
                 <span>U</span>
             </div>
         </header>
         
-        <nav class="nav-container">
+        <nav class="nav-container pixel-nav">
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="home.html" class="nav-link">HOME</a>
+                <li class="nav-item pixel-nav-item">
+                    <a href="home.html" class="nav-link pixel-nav-link">HOME</a>
                 </li>
-                <li class="nav-item">
-                    <a href="markets.html" class="nav-link">MARKETS</a>
+                <li class="nav-item pixel-nav-item">
+                    <a href="markets.html" class="nav-link pixel-nav-link">MARKETS</a>
                 </li>
-                <li class="nav-item">
-                    <a href="trade.html" class="nav-link active">TRADE</a>
+                <li class="nav-item pixel-nav-item">
+                    <a href="trade.html" class="nav-link pixel-nav-link active">TRADE</a>
                 </li>
-                <li class="nav-item">
-                    <a href="wallet.html" class="nav-link">WALLET</a>
+                <li class="nav-item pixel-nav-item">
+                    <a href="wallet.html" class="nav-link pixel-nav-link">WALLET</a>
                 </li>
             </ul>
         </nav>
         
         <main class="trade-container">
-            <div class="trade-header">
+            <div class="trade-header pixel-card">
                 <div class="pair-selector">
                     <div class="selected-pair">
                         <div class="pair-icons">
-                            <div class="coin-icon vrt-icon">V</div>
-                            <div class="coin-icon usdt-icon">U</div>
+                            <div class="coin-icon vrt-icon pixel-icon">V</div>
+                            <div class="coin-icon usdt-icon pixel-icon">U</div>
                         </div>
                         <span class="pair-name">VRT/USDT</span>
                     </div>
@@ -54,7 +57,7 @@
             </div>
             
             <div class="trade-layout">
-                <div class="chart-section">
+                <div class="chart-section pixel-card">
                     <div class="chart-placeholder">
                         <div class="chart-message">
                             📈 Trading Chart
@@ -64,12 +67,12 @@
                 </div>
                 
                 <div class="order-section">
-                    <div class="order-tabs">
-                        <button class="order-tab active" data-type="limit">LIMIT</button>
-                        <button class="order-tab" data-type="market">MARKET</button>
+                    <div class="order-tabs pixel-nav">
+                        <button class="order-tab active pixel-btn" data-type="limit">LIMIT</button>
+                        <button class="order-tab pixel-btn" data-type="market">MARKET</button>
                     </div>
                     
-                    <div class="buy-panel">
+                    <div class="buy-panel pixel-card pixel-trade-panel buy">
                         <div class="panel-header buy-header">
                             <span class="panel-title">BUY VRT</span>
                             <span class="balance-info">Available: $1,250.75</span>
@@ -77,21 +80,21 @@
                         <div class="order-form">
                             <div class="form-group">
                                 <label>Price (USDT)</label>
-                                <input type="number" placeholder="0.00" class="price-input">
+                                <input type="number" placeholder="0.00" class="price-input pixel-input">
                             </div>
                             <div class="form-group">
                                 <label>Amount (VRT)</label>
-                                <input type="number" placeholder="0.00" class="amount-input">
+                                <input type="number" placeholder="0.00" class="amount-input pixel-input">
                             </div>
                             <div class="form-group">
                                 <label>Total (USDT)</label>
-                                <input type="number" placeholder="0.00" class="total-input" readonly>
+                                <input type="number" placeholder="0.00" class="total-input pixel-input" readonly>
                             </div>
-                            <button class="trade-btn buy-btn">BUY VRT</button>
+                            <button class="trade-btn buy-btn pixel-btn pixel-btn-success">BUY VRT</button>
                         </div>
                     </div>
                     
-                    <div class="sell-panel">
+                    <div class="sell-panel pixel-card pixel-trade-panel sell">
                         <div class="panel-header sell-header">
                             <span class="panel-title">SELL VRT</span>
                             <span class="balance-info">Available: 0.00 VRT</span>
@@ -99,23 +102,23 @@
                         <div class="order-form">
                             <div class="form-group">
                                 <label>Price (USDT)</label>
-                                <input type="number" placeholder="0.00" class="price-input">
+                                <input type="number" placeholder="0.00" class="price-input pixel-input">
                             </div>
                             <div class="form-group">
                                 <label>Amount (VRT)</label>
-                                <input type="number" placeholder="0.00" class="amount-input">
+                                <input type="number" placeholder="0.00" class="amount-input pixel-input">
                             </div>
                             <div class="form-group">
                                 <label>Total (USDT)</label>
-                                <input type="number" placeholder="0.00" class="total-input" readonly>
+                                <input type="number" placeholder="0.00" class="total-input pixel-input" readonly>
                             </div>
-                            <button class="trade-btn sell-btn">SELL VRT</button>
+                            <button class="trade-btn sell-btn pixel-btn pixel-btn-danger">SELL VRT</button>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="order-book">
+            <div class="order-book pixel-card pixel-order-book">
                 <div class="book-section">
                     <h3 class="book-title">ORDER BOOK</h3>
                     <div class="bids">
