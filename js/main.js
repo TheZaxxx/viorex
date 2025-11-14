@@ -529,35 +529,7 @@ startPriceUpdates() {
         this.updateTodayPL();
     }, 8000); // Update every 8 seconds
 }
-Ringkasan perubahan di js/main.js:
-HAPUS method updateBalanceBreakdown()
-
-TAMBAH method updateTodayPL()
-
-TAMBAH this.updateTodayPL(); di updateUIForLoggedInUser()
-
-TAMBAH this.updateTodayPL(); di startPriceUpdates()
-
-Gitu aja bro! Yang lain tetap sama.
-
-Nah gitu kan jelas
-Mantap bro! 🎯
-
-Sekarang jelas banget:
-
-Hapus updateBalanceBreakdown() yang lama
-
-Tambah updateTodayPL() yang baru
-
-Panggil this.updateTodayPL() di 2 tempat
-
-Gas langsung implement! Kalo ada error atau yang kurang pas, tinggal bilang aja.
-
-Exchange VIOREX makin clean dan professional! 💪
-
-
-
-
+        
     updateAssetLists() {
     if (!this.currentUser || !this.currentUser.assets) return;
 
