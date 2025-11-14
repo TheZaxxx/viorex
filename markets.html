@@ -6,39 +6,42 @@
     <title>Markets - VIOREX</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
+    <!-- TAMBAH BARIS INI -->
+    <link rel="stylesheet" href="css/pixel-art.css">
 </head>
-<body>
+<!-- MODIFIKASI BODY MENJADI SEPERTI INI -->
+<body class="pixel-art">
     <div class="container">
         <header>
             <div class="logo">
                 <img src="assets/images/logo.png" alt="VIOREX">
                 <h1>VIOREX</h1>
             </div>
-            <div class="profile-icon">
+            <div class="profile-icon pixel-icon">
                 <span>U</span>
             </div>
         </header>
         
-        <nav class="nav-container">
+        <nav class="nav-container pixel-nav">
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="home.html" class="nav-link">HOME</a>
+                <li class="nav-item pixel-nav-item">
+                    <a href="home.html" class="nav-link pixel-nav-link">HOME</a>
                 </li>
-                <li class="nav-item">
-                    <a href="markets.html" class="nav-link active">MARKETS</a>
+                <li class="nav-item pixel-nav-item">
+                    <a href="markets.html" class="nav-link pixel-nav-link active">MARKETS</a>
                 </li>
-                <li class="nav-item">
-                    <a href="trade.html" class="nav-link">TRADE</a>
+                <li class="nav-item pixel-nav-item">
+                    <a href="trade.html" class="nav-link pixel-nav-link">TRADE</a>
                 </li>
-                <li class="nav-item">
-                    <a href="wallet.html" class="nav-link">WALLET</a>
+                <li class="nav-item pixel-nav-item">
+                    <a href="wallet.html" class="nav-link pixel-nav-link">WALLET</a>
                 </li>
             </ul>
         </nav>
         
         <main>
             <div class="search-container">
-                <input type="text" class="search-bar" placeholder="Search coins...">
+                <input type="text" class="search-bar pixel-input" placeholder="Search coins...">
             </div>
             
             <div class="markets-header">
@@ -55,8 +58,8 @@
                 </div>
             </div>
             
-            <div class="markets-table">
-                <div class="table-header">
+            <div class="markets-table pixel-card">
+                <div class="table-header pixel-table-header">
                     <div class="table-col asset">ASSET</div>
                     <div class="table-col price">PRICE</div>
                     <div class="table-col change">24H CHANGE</div>
@@ -65,10 +68,10 @@
                 </div>
                 
                 <div class="table-body">
-                    <div class="table-row" data-symbol="VRT/USDT">
+                    <div class="table-row pixel-table-row" data-symbol="VRT/USDT">
                         <div class="table-col asset">
                             <div class="asset-cell">
-                                <div class="coin-icon vrt-icon">V</div>
+                                <div class="coin-icon vrt-icon pixel-icon">V</div>
                                 <div class="coin-details">
                                     <div class="coin-name">VRT</div>
                                     <div class="coin-full">Viorex Token</div>
@@ -85,56 +88,17 @@
                             <div class="volume-value">$2.5M</div>
                         </div>
                         <div class="table-col action">
-                            <button class="trade-btn-small">TRADE</button>
+                            <button class="trade-btn-small pixel-btn pixel-btn-primary">TRADE</button>
                         </div>
                     </div>
                     
-                    <div class="table-row" data-symbol="VRDT/USDT">
-                        <div class="table-col asset">
-                            <div class="asset-cell">
-                                <div class="coin-icon vrdt-icon">V</div>
-                                <div class="coin-details">
-                                    <div class="coin-name">VRDT</div>
-                                    <div class="coin-full">Viorex Dollar</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-col price">
-                            <div class="price-value">$1.0000</div>
-                        </div>
-                        <div class="table-col change">
-                            <div class="change-value neutral">0.00%</div>
-                        </div>
-                        <div class="table-col volume">
-                            <div class="volume-value">$1.8M</div>
-                        </div>
-                        <div class="table-col action">
-                            <button class="trade-btn-small">TRADE</button>
-                        </div>
+                    <!-- Data lainnya tetap sama, tapi tambahkan class pixel-table-row di setiap table-row -->
+                    <div class="table-row pixel-table-row" data-symbol="VRDT/USDT">
+                        <!-- ... existing content ... -->
                     </div>
                     
-                    <div class="table-row" data-symbol="VRT/VRDT">
-                        <div class="table-col asset">
-                            <div class="asset-cell">
-                                <div class="coin-icon vrt-icon">V</div>
-                                <div class="coin-details">
-                                    <div class="coin-name">VRT/VRDT</div>
-                                    <div class="coin-full">Viorex Pair</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-col price">
-                            <div class="price-value">0.8500</div>
-                        </div>
-                        <div class="table-col change">
-                            <div class="change-value positive">+5.20%</div>
-                        </div>
-                        <div class="table-col volume">
-                            <div class="volume-value">$1.2M</div>
-                        </div>
-                        <div class="table-col action">
-                            <button class="trade-btn-small">TRADE</button>
-                        </div>
+                    <div class="table-row pixel-table-row" data-symbol="VRT/VRDT">
+                        <!-- ... existing content ... -->
                     </div>
                 </div>
             </div>
