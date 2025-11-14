@@ -1182,6 +1182,19 @@
     font-size: 1rem; /* Dari 1.1rem */
 }
 /* === PIXEL ART OVERRIDES === */
+/* Custom icons for feature cards */
+.pixel-art .feature-icon-small {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    image-rendering: auto; /* Maintain image quality */
+    margin-bottom: 8px;
+}
+
+/* Remove old emoji styling */
+.pixel-art .feature-card-small .feature-icon-small:not(img) {
+    display: none;
+}
 /* Logo enlargement for pixel art theme */
 .pixel-art .logo {
     display: flex;
