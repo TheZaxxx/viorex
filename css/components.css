@@ -1190,7 +1190,7 @@
 }
 
 .pixel-art .logo img {
-    width: 120px; /* Adjust this value to make logo wider */
+    width: 150px; /* Adjust this value to make logo wider */
     height: auto;
     image-rendering: auto; /* Maintain logo quality */
 }
