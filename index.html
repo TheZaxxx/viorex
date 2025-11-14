@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIOREX - Cryptocurrency Exchange</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <!-- UPDATE: Kembali ke img logo asli -->
+                <img src="assets/images/logo.png" alt="VIOREX">
+                <h1>VIOREX</h1>
+            </div>
+        </header>
+        
+        <main class="auth-container">
+            <div class="auth-box">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">LOGIN</button>
+                    <button class="tab-btn" data-tab="register">REGISTER</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div id="login" class="tab-panel active">
+                        <form class="auth-form">
+                            <div class="input-group">
+                                <label for="login-email">Email</label>
+                                <input type="email" id="login-email" required placeholder="your@email.com">
+                            </div>
+                            <div class="input-group">
+                                <label for="login-password">Password</label>
+                                <input type="password" id="login-password" required placeholder="••••••••">
+                            </div>
+                            <!-- UPDATE: Hapus demo credentials info -->
+                            <button type="submit" class="btn-primary" id="login-btn">LOGIN</button>
+                        </form>
+                    </div>
+                    
+                    <div id="register" class="tab-panel">
+                        <form class="auth-form">
+                            <div class="input-group">
+                                <label for="reg-email">Email</label>
+                                <input type="email" id="reg-email" required placeholder="your@email.com">
+                            </div>
+                            <div class="input-group">
+                                <label for="reg-password">Password</label>
+                                <input type="password" id="reg-password" required placeholder="••••••••">
+                                <div class="password-hint">Minimum 6 characters</div>
+                            </div>
+                            <div class="input-group">
+                                <label for="reg-confirm">Confirm Password</label>
+                                <input type="password" id="reg-confirm" required placeholder="••••••••">
+                            </div>
+                            <div class="referral-group">
+                                <label class="referral-label" for="referral-code">
+                                    Referral Code <span class="referral-optional">(Optional)</span>
+                                </label>
+                                <input type="text" id="referral-code" placeholder="Enter referral code">
+                            </div>
+                            <!-- UPDATE: Hapus demo info -->
+                            <button type="submit" class="btn-primary" id="register-btn">REGISTER</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/auth.js"></script>
+</body>
+</html>

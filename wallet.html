@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - VIOREX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="VIOREX">
+                <h1>VIOREX</h1>
+            </div>
+            <div class="profile-icon">
+                <span>U</span>
+            </div>
+        </header>
+        
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="markets.html" class="nav-link">MARKETS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="trade.html" class="nav-link">TRADE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="wallet.html" class="nav-link active">WALLET</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div class="wallet-summary">
+                <div class="balance-label">TOTAL ASSETS</div>
+                <div class="balance-amount">$0.00</div>
+                <!-- UPDATE: Tambah estimated balance -->
+                <div class="estimated-balance">≈ 0.00 VRDT</div>
+            </div>
+            
+            <div class="wallet-actions">
+                <button class="wallet-btn">DEPOSIT</button>
+                <button class="wallet-btn">WITHDRAW</button>
+            </div>
+            
+            <div class="wallet-tabs">
+                <button class="wallet-tab active" data-tab="asset">ASSET</button>
+            </div>
+            
+            <!-- UPDATE: Asset list dengan estimated value -->
+            <div class="asset-list" id="asset-assets">
+                <div class="asset-item">
+                    <img src="assets/images/vrt-logo.png" alt="VRT" class="asset-icon">
+                    <div class="asset-info">
+                        <div class="asset-name">VRT</div>
+                        <div class="asset-balance">0.00</div>
+                        <div class="asset-estimated">≈ $0.00</div>
+                    </div>
+                </div>
+                <div class="asset-item">
+                    <img src="assets/images/vrdt-logo.png" alt="VRDT" class="asset-icon">
+                    <div class="asset-info">
+                        <div class="asset-name">VRDT</div>
+                        <div class="asset-balance">0.00</div>
+                        <div class="asset-estimated">≈ $0.00</div>
+                    </div>
+                </div>
+                <div class="asset-item">
+                    <img src="assets/images/usdt-logo.png" alt="USDT" class="asset-icon">
+                    <div class="asset-info">
+                        <div class="asset-name">USDT</div>
+                        <div class="asset-balance">0.00</div>
+                        <div class="asset-estimated">≈ $0.00</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

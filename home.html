@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - VIOREX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="VIOREX">
+                <h1>VIOREX</h1>
+            </div>
+            <div class="profile-icon">
+                <span>U</span>
+            </div>
+        </header>
+        
+        <nav class="nav-container">
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="home.html" class="nav-link active">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a href="markets.html" class="nav-link">MARKETS</a>
+        </li>
+        <li class="nav-item">
+            <a href="trade.html" class="nav-link">TRADE</a>
+        </li>
+        <li class="nav-item">
+            <a href="wallet.html" class="nav-link">WALLET</a>
+        </li>
+    </ul>
+</nav>
+        
+        <main>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search coins...">
+            </div>
+            
+            <div class="balance-container">
+                <div class="balance-label">TOTAL BALANCE</div>
+                <div class="balance-amount">$0.00</div>
+                <!-- UPDATE: Today P&L di bawah Total Balance, posisi kiri -->
+                <div class="today-pl">
+                    <span class="today-pl-label">Today P&L:</span>
+                    <span class="today-pl-value">$0.00</span>
+                </div>
+            </div>
+
+            <div class="feature-grid-horizontal">
+                <div class="feature-card-small" data-feature="reward">
+                    <div class="feature-icon-small">🎁</div>
+                    <div class="feature-name-small">REWARD</div>
+                </div>
+                <div class="feature-card-small" data-feature="event">
+                    <div class="feature-icon-small">📅</div>
+                    <div class="feature-name-small">EVENT</div>
+                </div>
+            </div>
+            
+            <div class="coin-section">
+                <h2 class="section-title">POPULAR PAIRS</h2>
+                <div class="coin-list">
+                    <div class="coin-item">
+                        <div class="coin-icon vrt-icon">V</div>
+                        <div class="coin-info">
+                            <div class="coin-pair">VRT/USDT</div>
+                            <div class="coin-volume">Vol: $0M</div>
+                        </div>
+                        <div class="coin-price-data">
+                            <div class="coin-price na">--</div>
+                            <div class="coin-change neutral">0%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
