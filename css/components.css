@@ -1080,6 +1080,149 @@
     font-size: 1rem; /* Dari 1.1rem */
 }
 /* === PIXEL ART OVERRIDES === */
+/* Pixel Art Trade Page Specific Styles */
+.pixel-art .trade-header {
+    background: var(--color-light);
+    border: var(--border-pixel) solid var(--color-dark);
+    border-radius: 0;
+    padding: 12px 15px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-art .pair-icons .coin-icon {
+    border: var(--border-pixel) solid var(--color-dark);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-art .pair-name {
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-art .current-price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.pixel-art .price-change {
+    padding: 4px 8px;
+    border: var(--border-pixel) solid var(--color-dark);
+    background: var(--color-light);
+    font-weight: bold;
+}
+
+.pixel-art .price-change.positive {
+    color: var(--color-success);
+    border-color: var(--color-success);
+    background: #f0fff0;
+}
+
+.pixel-art .chart-section {
+    background: var(--color-light);
+    border: var(--border-pixel) solid var(--color-dark);
+    border-radius: 0;
+    padding: 15px;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.pixel-art .chart-placeholder {
+    border: var(--border-pixel) dashed var(--color-dark);
+    background: rgba(0, 168, 107, 0.05);
+}
+
+.pixel-art .order-tabs {
+    background: var(--color-light);
+    border: var(--border-pixel) solid var(--color-dark);
+    border-radius: 0;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-art .buy-panel,
+.pixel-art .sell-panel {
+    background: var(--color-light);
+    border: var(--border-pixel) solid var(--color-dark);
+    border-radius: 0;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-art .buy-panel {
+    border-color: var(--color-success);
+}
+
+.pixel-art .sell-panel {
+    border-color: var(--color-danger);
+}
+
+.pixel-art .panel-header {
+    padding: 12px 15px;
+    font-weight: bold;
+    border-bottom: var(--border-pixel) solid var(--color-dark);
+}
+
+.pixel-art .buy-header {
+    background: rgba(0, 168, 107, 0.1);
+    color: var(--color-success);
+}
+
+.pixel-art .sell-header {
+    background: rgba(255, 68, 68, 0.1);
+    color: var(--color-danger);
+}
+
+.pixel-art .order-form {
+    padding: 15px;
+}
+
+.pixel-art .form-group label {
+    color: var(--color-dark);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.pixel-art .order-book {
+    background: var(--color-light);
+    border: var(--border-pixel) solid var(--color-dark);
+    border-radius: 0;
+    padding: 15px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-art .book-title {
+    color: var(--color-dark);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+    border-bottom: var(--border-pixel) solid var(--color-dark);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.pixel-art .book-row {
+    border-bottom: var(--border-pixel) solid var(--color-dark);
+    padding: 6px 0;
+}
+
+.pixel-art .book-row.header {
+    font-weight: bold;
+    color: var(--color-dark);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.pixel-art .book-row.bid .price {
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+.pixel-art .book-row.ask .price {
+    color: var(--color-danger);
+    font-weight: bold;
+}
+
+.pixel-art .spread {
+    color: var(--color-warning);
+    font-weight: bold;
+    padding: 8px 0;
+    border-bottom: var(--border-pixel) solid var(--color-dark);
+}
 .pixel-art .balance-container {
     background: var(--color-light);
     border: var(--border-pixel) solid var(--color-dark);
