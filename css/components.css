@@ -1,0 +1,1081 @@
+/* Search Bar */
+.search-container {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.1);
+}
+
+.search-container::after {
+    content: '🔍';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary);
+}
+
+/* Balance Display */
+.balance-container {
+    background: var(--light);
+    border: var(--border-width) solid var(--accent);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, var(--light) 0%, #f8fff8 100%);
+}
+
+.balance-label {
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.balance-amount {
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, var(--accent), var(--success));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 168, 107, 0.3);
+    line-height: 1.1;
+    margin-bottom: 8px; /* Beri space untuk Today P&L */
+}
+
+/* UPDATE: Today P&L Styles */
+.today-pl {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.today-pl-label {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.today-pl-value {
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(0, 168, 107, 0.1);
+}
+
+.today-pl-value.positive {
+    color: var(--success);
+    background: rgba(0, 168, 107, 0.1);
+}
+
+.today-pl-value.negative {
+    color: var(--danger);
+    background: rgba(255, 68, 68, 0.1);
+}
+
+/* HAPUS: Balance breakdown yang lama */
+.balance-breakdown {
+    display: none;
+}
+
+/* UPDATE: Horizontal Feature Grid untuk 2 items */
+.feature-grid-horizontal {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.feature-card-small {
+    flex: 1;
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    padding: 20px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.feature-card-small::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s;
+}
+
+.feature-card-small:hover::before {
+    left: 100%;
+}
+
+.feature-card-small:hover {
+    transform: translateY(-3px);
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-icon-small {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 1;
+}
+
+.feature-name-small {
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Coin List */
+.coin-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: var(--secondary);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: var(--border-width) solid var(--secondary);
+    font-weight: bold;
+}
+
+.coin-list {
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.coin-item {
+    display: flex;
+    align-items: center;
+    padding: 18px 15px;
+    border-bottom: var(--border-width) solid rgba(0, 168, 107, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.coin-item:last-child {
+    border-bottom: none;
+}
+
+.coin-item:hover {
+    background: rgba(0, 168, 107, 0.05);
+    transform: translateX(5px);
+}
+
+.coin-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+    margin-right: 15px;
+    border: 2px solid var(--light);
+    box-shadow: var(--shadow-sm);
+}
+
+.vrt-icon { background: linear-gradient(45deg, #00a86b, #008c5a); }
+.vrdt-icon { background: linear-gradient(45deg, #008c5a, #006b47); }
+.usdt-icon { background: linear-gradient(45deg, #26a17b, #1e8567); }
+
+.coin-info {
+    flex: 1;
+}
+
+.coin-pair {
+    font-weight: bold;
+    color: var(--text);
+    font-size: 1.1rem;
+}
+
+.coin-volume {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    margin-top: 2px;
+}
+
+.coin-price-data {
+    text-align: right;
+}
+
+.coin-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.coin-price.positive {
+    color: var(--success);
+}
+
+.coin-price.negative {
+    color: var(--danger);
+}
+
+.coin-price.na {
+    color: var(--warning);
+}
+
+.coin-change {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.coin-change.positive {
+    color: var(--success);
+}
+
+.coin-change.negative {
+    color: var(--danger);
+}
+
+/* HAPUS: Trading Interface styles (Spot & Futures) */
+
+/* Wallet Styles */
+.wallet-summary {
+    background: var(--light);
+    border: var(--border-width) solid var(--accent);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, var(--light) 0%, #f8fff8 100%);
+}
+
+.wallet-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.wallet-btn {
+    flex: 1;
+    padding: 14px;
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    color: var(--text);
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.wallet-btn:hover {
+    background: var(--primary);
+    color: var(--light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.wallet-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: var(--border-width) solid var(--secondary);
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+}
+
+.wallet-tab {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    font-weight: bold;
+}
+
+.wallet-tab.active {
+    background: var(--secondary);
+    color: var(--light);
+}
+
+.wallet-tab:hover:not(.active) {
+    background: rgba(0, 140, 90, 0.1);
+}
+
+.asset-list {
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.asset-item {
+    display: flex;
+    align-items: center;
+    padding: 18px 15px;
+    border-bottom: var(--border-width) solid rgba(0, 168, 107, 0.1);
+    transition: all 0.3s ease;
+}
+
+.asset-item:last-child {
+    border-bottom: none;
+}
+
+.asset-item:hover {
+    background: rgba(0, 168, 107, 0.05);
+}
+
+.asset-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    margin-right: 15px;
+    border: 2px solid var(--light);
+    box-shadow: var(--shadow-sm);
+}
+
+.asset-name {
+    flex: 1;
+    font-weight: bold;
+    color: var(--text);
+    font-size: 1.1rem;
+}
+
+.asset-balance {
+    color: var(--text);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.asset-value {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+/* Profile Icon */
+.profile-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: var(--border-width) solid var(--light);
+    color: var(--light);
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-md);
+}
+
+/* Referral Input */
+.referral-group {
+    margin-bottom: 15px;
+}
+
+.referral-label {
+    display: flex;
+    align-items: center;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.referral-optional {
+    font-size: 0.8rem;
+    color: var(--warning);
+    margin-left: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-grid-horizontal {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .feature-card-small {
+        flex: 1 0 calc(50% - 10px);
+        min-width: 120px;
+    }
+    
+    .wallet-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-grid-horizontal {
+        flex-direction: row;
+    }
+    
+    .feature-card-small {
+        flex: 1;
+    }
+    
+    .balance-amount {
+        font-size: 2.2rem;
+    }
+}
+
+/* === MARKETS PAGE STYLES === */
+.markets-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.markets-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.market-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text);
+}
+
+.markets-table {
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.table-header {
+    display: flex;
+    background: var(--secondary);
+    color: var(--light);
+    font-weight: bold;
+    padding: 15px;
+}
+
+.table-col {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.table-col.asset { flex: 2; }
+.table-col.action { flex: 0.8; }
+
+.table-body {
+    background: var(--light);
+}
+
+.table-row {
+    display: flex;
+    align-items: center;
+    padding: 18px 15px;
+    border-bottom: var(--border-width) solid rgba(0, 168, 107, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row:hover {
+    background: rgba(0, 168, 107, 0.05);
+}
+
+.asset-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.coin-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.coin-name {
+    font-weight: bold;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.coin-full {
+    font-size: 0.8rem;
+    color: var(--secondary);
+}
+
+.price-value {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.change-value {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.change-value.positive {
+    color: var(--success);
+    background: rgba(0, 168, 107, 0.1);
+}
+
+.change-value.negative {
+    color: var(--danger);
+    background: rgba(255, 68, 68, 0.1);
+}
+
+.change-value.neutral {
+    color: var(--warning);
+    background: rgba(255, 170, 0, 0.1);
+}
+
+.volume-value {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.trade-btn-small {
+    padding: 8px 16px;
+    background: var(--secondary);
+    border: var(--border-width) solid var(--secondary);
+    color: var(--light);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.trade-btn-small:hover {
+    background: var(--primary);
+    transform: translateY(-1px);
+}
+
+/* === TRADE PAGE STYLES === */
+.trade-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+.pair-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.selected-pair {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pair-icons {
+    display: flex;
+    align-items: center;
+}
+
+.pair-icons .coin-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+    margin-right: -8px;
+}
+
+.pair-icons .coin-icon:last-child {
+    margin-right: 0;
+}
+
+.pair-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--text);
+}
+
+.pair-price {
+    text-align: right;
+}
+
+.current-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.price-change {
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.price-change.positive {
+    color: var(--success);
+    background: rgba(0, 168, 107, 0.1);
+}
+
+.price-change.negative {
+    color: var(--danger);
+    background: rgba(255, 68, 68, 0.1);
+}
+
+.trade-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.chart-section {
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 400px;
+}
+
+.chart-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: rgba(0, 168, 107, 0.05);
+    border: 2px dashed var(--secondary);
+    border-radius: 6px;
+}
+
+.chart-message {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.chart-sub {
+    font-size: 0.9rem;
+    margin-top: 8px;
+    color: var(--text);
+    font-weight: normal;
+}
+
+.order-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-tabs {
+    display: flex;
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.order-tab {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.order-tab.active {
+    background: var(--secondary);
+    color: var(--light);
+}
+
+.buy-panel, .sell-panel {
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.panel-header {
+    padding: 15px 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy-header {
+    background: rgba(0, 168, 107, 0.1);
+    color: var(--success);
+}
+
+.sell-header {
+    background: rgba(255, 68, 68, 0.1);
+    color: var(--danger);
+}
+
+.balance-info {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: var(--secondary);
+}
+
+.order-form {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    color: var(--text);
+    font-family: inherit;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 2px rgba(0, 168, 107, 0.1);
+}
+
+.trade-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.buy-btn {
+    background: var(--success);
+    color: var(--light);
+}
+
+.buy-btn:hover {
+    background: #008c5a;
+    transform: translateY(-2px);
+}
+
+.sell-btn {
+    background: var(--danger);
+    color: var(--light);
+}
+
+.sell-btn:hover {
+    background: #cc3333;
+    transform: translateY(-2px);
+}
+
+.order-book {
+    background: var(--light);
+    border: var(--border-width) solid var(--primary);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.book-section {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.book-title {
+    text-align: center;
+    color: var(--secondary);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.book-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 168, 107, 0.1);
+}
+
+.book-row.header {
+    font-weight: bold;
+    color: var(--secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.book-row.bid .price {
+    color: var(--success);
+    font-weight: bold;
+}
+
+.book-row.ask .price {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+.spread {
+    text-align: center;
+    padding: 10px 0;
+    color: var(--warning);
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 168, 107, 0.1);
+}
+
+/* === WALLET ENHANCEMENTS === */
+.estimated-balance {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.asset-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.asset-estimated {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    margin-top: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .trade-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .markets-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .markets-stats {
+        align-self: flex-end;
+    }
+    
+    .table-header {
+        display: none;
+    }
+    
+    .table-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .table-col {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .table-col::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--secondary);
+    }
+}
+    /* === MARKETS PAGE SIZE REDUCTION === */
+.table-header {
+    padding: 12px 15px; /* Dari 15px */
+    font-size: 0.8rem; /* Tambah ini */
+}
+
+.table-row {
+    padding: 14px 12px; /* Dari 18px 15px */
+}
+
+.coin-name {
+    font-size: 0.9rem; /* Dari 1rem */
+}
+
+.coin-full {
+    font-size: 0.75rem; /* Dari 0.8rem */
+}
+
+.trade-btn-small {
+    padding: 6px 12px; /* Dari 8px 16px */
+    font-size: 0.8rem; /* Tambah ini */
+}
+
+/* === TRADE PAGE SIZE REDUCTION === */
+.trade-header {
+    padding: 12px 15px; /* Dari 15px 20px */
+}
+
+.pair-name {
+    font-size: 1.1rem; /* Dari 1.3rem */
+}
+
+.current-price {
+    font-size: 1.3rem; /* Dari 1.5rem */
+}
+
+.order-tab {
+    padding: 10px; /* Dari 12px */
+    font-size: 0.9rem; /* Tambah ini */
+}
+
+.panel-header {
+    padding: 12px 15px; /* Dari 15px 20px */
+    font-size: 0.9rem; /* Tambah ini */
+}
+
+.order-form {
+    padding: 15px; /* Dari 20px */
+}
+
+.form-group {
+    margin-bottom: 12px; /* Dari 15px */
+}
+
+.form-group label {
+    font-size: 0.85rem; /* Dari 0.9rem */
+}
+
+.form-group input {
+    padding: 8px; /* Dari 10px */
+}
+
+.trade-btn {
+    padding: 10px; /* Dari 12px */
+    font-size: 0.9rem; /* Tambah ini */
+}
+
+/* === WALLET PAGE SIZE REDUCTION === */
+.wallet-summary {
+    padding: 20px; /* Dari 25px */
+}
+
+.wallet-btn {
+    padding: 12px; /* Dari 14px */
+    font-size: 0.9rem; /* Tambah ini */
+}
+
+.wallet-tab {
+    padding: 10px 15px; /* Dari 12px 20px */
+    font-size: 0.9rem; /* Tambah ini */
+}
+
+.asset-item {
+    padding: 14px 12px; /* Dari 18px 15px */
+}
+
+.asset-icon {
+    width: 35px; /* Dari 40px */
+    height: 35px;
+}
+
+.asset-name {
+    font-size: 1rem; /* Dari 1.1rem */
+}
+
+.asset-balance {
+    font-size: 1rem; /* Dari 1.1rem */
+}
+
+.asset-estimated {
+    font-size: 0.75rem; /* Dari 0.8rem */
+}
+
+/* === PROFILE ICON SIZE REDUCTION === */
+.profile-icon {
+    width: 40px; /* Dari 45px */
+    height: 40px;
+    font-size: 1rem; /* Dari 1.1rem */
+}
