@@ -6,45 +6,47 @@
     <title>Home - VIOREX</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
+    <!-- TAMBAH BARIS INI -->
+    <link rel="stylesheet" href="css/pixel-art.css">
 </head>
-<body>
+<!-- MODIFIKASI BODY MENJADI SEPERTI INI -->
+<body class="pixel-art">
     <div class="container">
         <header>
             <div class="logo">
                 <img src="assets/images/logo.png" alt="VIOREX">
                 <h1>VIOREX</h1>
             </div>
-            <div class="profile-icon">
+            <div class="profile-icon pixel-icon">
                 <span>U</span>
             </div>
         </header>
         
-        <nav class="nav-container">
-    <ul class="nav-menu">
-        <li class="nav-item">
-            <a href="home.html" class="nav-link active">HOME</a>
-        </li>
-        <li class="nav-item">
-            <a href="markets.html" class="nav-link">MARKETS</a>
-        </li>
-        <li class="nav-item">
-            <a href="trade.html" class="nav-link">TRADE</a>
-        </li>
-        <li class="nav-item">
-            <a href="wallet.html" class="nav-link">WALLET</a>
-        </li>
-    </ul>
-</nav>
+        <nav class="nav-container pixel-nav">
+            <ul class="nav-menu">
+                <li class="nav-item pixel-nav-item">
+                    <a href="home.html" class="nav-link pixel-nav-link active">HOME</a>
+                </li>
+                <li class="nav-item pixel-nav-item">
+                    <a href="markets.html" class="nav-link pixel-nav-link">MARKETS</a>
+                </li>
+                <li class="nav-item pixel-nav-item">
+                    <a href="trade.html" class="nav-link pixel-nav-link">TRADE</a>
+                </li>
+                <li class="nav-item pixel-nav-item">
+                    <a href="wallet.html" class="nav-link pixel-nav-link">WALLET</a>
+                </li>
+            </ul>
+        </nav>
         
         <main>
             <div class="search-container">
-                <input type="text" class="search-bar" placeholder="Search coins...">
+                <input type="text" class="search-bar pixel-input" placeholder="Search coins...">
             </div>
             
-            <div class="balance-container">
+            <div class="balance-container pixel-balance">
                 <div class="balance-label">TOTAL BALANCE</div>
                 <div class="balance-amount">$0.00</div>
-                <!-- UPDATE: Today P&L di bawah Total Balance, posisi kiri -->
                 <div class="today-pl">
                     <span class="today-pl-label">Today P&L:</span>
                     <span class="today-pl-value">$0.00</span>
@@ -52,11 +54,11 @@
             </div>
 
             <div class="feature-grid-horizontal">
-                <div class="feature-card-small" data-feature="reward">
+                <div class="feature-card-small pixel-feature-card" data-feature="reward">
                     <div class="feature-icon-small">🎁</div>
                     <div class="feature-name-small">REWARD</div>
                 </div>
-                <div class="feature-card-small" data-feature="event">
+                <div class="feature-card-small pixel-feature-card" data-feature="event">
                     <div class="feature-icon-small">📅</div>
                     <div class="feature-name-small">EVENT</div>
                 </div>
@@ -65,8 +67,8 @@
             <div class="coin-section">
                 <h2 class="section-title">POPULAR PAIRS</h2>
                 <div class="coin-list">
-                    <div class="coin-item">
-                        <div class="coin-icon vrt-icon">V</div>
+                    <div class="coin-item pixel-coin-item">
+                        <div class="coin-icon vrt-icon pixel-icon">V</div>
                         <div class="coin-info">
                             <div class="coin-pair">VRT/USDT</div>
                             <div class="coin-volume">Vol: $0M</div>
