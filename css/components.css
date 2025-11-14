@@ -1528,3 +1528,29 @@
     transform: translate(2px, 2px);
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
+/* Custom coin icons styling for home page */
+.pixel-art .coin-item .coin-icon {
+    width: 40px;
+    height: 40px;
+    border: var(--border-pixel) solid var(--color-dark);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    background: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.pixel-art .coin-item .coin-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    image-rendering: auto; /* Maintain original image quality */
+}
+
+/* Remove the old colored backgrounds since we're using images */
+.pixel-art .coin-item .vrt-icon,
+.pixel-art .coin-item .vrdt-icon,
+.pixel-art .coin-item .usdt-icon {
+    background: var(--color-light) !important;
+}
