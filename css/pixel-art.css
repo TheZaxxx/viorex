@@ -415,4 +415,29 @@
 .chart-point.down {
     background: var(--color-danger);
 }
+ /* Simple Line Chart for Balance */
+.balance-chart {
+    width: 60px;
+    height: 30px;
+    margin-left: 15px;
+    position: relative;
+}
+
+.chart-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.7;
+}
+
+.chart-line.up {
+    color: var(--color-success);
+}
+
+.chart-line.down {
+    color: var(--color-danger);
+}   
 }
