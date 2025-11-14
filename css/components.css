@@ -1182,6 +1182,20 @@
     font-size: 1rem; /* Dari 1.1rem */
 }
 /* === PIXEL ART OVERRIDES === */
+/* Today P&L with chart layout */
+.pixel-art .today-pl {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.pixel-art .estimated-balance {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
 /* Logo enlargement for pixel art theme */
 .pixel-art .logo {
     display: flex;
