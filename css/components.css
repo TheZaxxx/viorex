@@ -1182,6 +1182,22 @@
     font-size: 1rem; /* Dari 1.1rem */
 }
 /* === PIXEL ART OVERRIDES === */
+/* Logo enlargement for pixel art theme */
+.pixel-art .logo {
+    display: flex;
+    align-items: center;
+    gap: 0; /* Remove gap between logo and text */
+}
+
+.pixel-art .logo img {
+    width: 120px; /* Adjust this value to make logo wider */
+    height: auto;
+    image-rendering: auto; /* Maintain logo quality */
+}
+
+.pixel-art .logo h1 {
+    display: none; /* Hide VIOREX text */
+}
 /* Pixel Art Trade Page Specific Styles */
 .pixel-art .trade-header {
     background: var(--color-light);
