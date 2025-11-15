@@ -176,5 +176,49 @@
             document.body.appendChild(script);
         });
 </script>
+        </main>
+    
+    <!-- PROFILE MENU COMPONENT -->
+    <div id="profileMenu" class="profile-menu">
+        <div class="profile-menu-header">
+            <div class="profile-avatar pixel-icon">
+                <span>U</span>
+            </div>
+            <div class="profile-info">
+                <div class="profile-name">User</div>
+                <div class="profile-uid">UID: 12345</div>
+            </div>
+            <button class="close-menu pixel-btn" id="closeProfileMenu">✕</button>
+        </div>
+        
+        <div class="profile-menu-items">
+            <a href="#" class="menu-item pixel-nav-link">
+                <span class="menu-icon">✓</span>
+                Verification
+            </a>
+            <a href="#" class="menu-item pixel-nav-link">
+                <span class="menu-icon">📊</span>
+                History
+            </a>
+            <a href="#" class="menu-item pixel-nav-link">
+                <span class="menu-icon">🔒</span>
+                Security
+            </a>
+            <a href="#" class="menu-item pixel-nav-link">
+                <span class="menu-icon">⚙️</span>
+                Settings
+            </a>
+            <button class="menu-item logout-btn pixel-btn pixel-btn-danger">
+                <span class="menu-icon">🚪</span>
+                Logout
+            </button>
+        </div>
+    </div>
+
+    <div id="profileOverlay" class="profile-overlay"></div>
+    <!-- END PROFILE MENU -->
+
+    <script src="js/main.js"></script>
+    <script src="js/profile-menu.js"></script>  <!-- TAMBAH INI -->
 </body>
 </html>
