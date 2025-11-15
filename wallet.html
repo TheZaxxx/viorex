@@ -84,5 +84,22 @@
     </div>
     
     <script src="js/main.js"></script>
+    <!-- Include Profile Menu -->
+<div id="profileMenuContainer">
+    <!-- Content will be loaded here -->
+</div>
+
+<script>
+    // Load profile menu component
+    fetch('profile-menu.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('profileMenuContainer').innerHTML = html;
+            // Load profile menu JS
+            const script = document.createElement('script');
+            script.src = 'js/profile-menu.js';
+            document.body.appendChild(script);
+        });
+</script>
 </body>
 </html>
